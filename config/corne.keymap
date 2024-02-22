@@ -96,6 +96,7 @@
         r_bracket {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <21 33>;
+            layers = <0 8 9>;
         };
 
         l_bracket2 {
