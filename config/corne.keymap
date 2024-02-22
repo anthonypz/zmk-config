@@ -291,7 +291,7 @@
             bindings = <&sk LEFT_SHIFT>, <&sk LA(LS(LG(LCTRL)))>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
