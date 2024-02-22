@@ -227,7 +227,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_TO_EXTRA";
             #binding-cells = <0>;
-            bindings = <&none>, <&to 9>;
+            bindings = <&none>, <&to 8>;
         };
 
         td_to_tap: tapdance_to_tap {
@@ -241,7 +241,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_TO_BUTTON";
             #binding-cells = <0>;
-            bindings = <&none>, <&to 8>;
+            bindings = <&none>, <&to 7>;
         };
 
         td_to_nav: td_to_nav {
@@ -336,19 +336,19 @@
             //                    | ESC | SPC | TAB |   | ENT | BKSP | DEL |
 
             bindings = <
-&kp GRAVE       &kp Q         &kp W            &kp F                &kp P              &kp B        &kp J        &kp L            &kp U                 &kp Y            &kp SEMI       &kp MINUS
-&cw_caps        &hml LMETA A  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G        &kp M        &hmr RSHIFT N    &hmr RIGHT_CONTROL E  &hmr LEFT_ALT I  &hmr LGUI O    &kp SQT
-&sk LEFT_SHIFT  &lt_c 8 Z     &kp X            &kp C                &kp D              &kp V        &kp K        &kp H            &kp COMMA             &kp DOT          &lt_c 8 SLASH  &kp BACKSLASH
-                                               &lt 3 ESCAPE         &lt 1 SPACE        &lt 2 TAB    &lt 5 ENTER  &lt 4 BACKSPACE  &lt 6 DELETE
+&kp GRAVE       &kp Q        &kp W        &kp F         &kp P         &kp B        &kp J        &kp L         &kp U         &kp Y        &kp SEMI       &kp MINUS
+&cw_caps        &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T  &kp G        &kp M        &hmr RSHFT N  &hmr RCTRL E  &hmr LALT I  &hmr LGUI O    &kp SQT
+&sk LEFT_SHIFT  &lt_c 7 Z    &kp X        &kp C         &kp D         &kp V        &kp K        &kp H         &kp COMMA     &kp DOT      &lt_c 7 SLASH  &kp BACKSLASH
+                                          &lt 3 ESCAPE  &lt 1 SPACE   &lt 2 TAB    &lt 5 ENTER  &lt 4 BSPC    &lt 6 DELETE
             >;
         };
 
         nav {
             bindings = <
-&td_boot  &td_reset     &td_to_tap    &td_to_extra      &td_to_base     &none    &kp LC(LS(Z))  &kp LC(V)      &kp LC(C)      &kp LC(X)     &kp LC(Z)  &none
-&none     &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none    &none          &kp LEFT       &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none
-&none     &none         &kp RALT      &td_to_num        &td_to_nav      &none    &kp INSERT     &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &none
-                                      &none             &none           &none    &kp RET        &kp BACKSPACE  &kp DELETE
+&td_boot  &td_reset  &td_to_tap  &td_to_extra  &td_to_base  &none    &kp LC(LS(Z))  &kp LC(V)  &kp LC(C)      &kp LC(X)    &kp LC(Z)  &none
+&none     &kp LGUI   &kp LALT    &kp LCTRL     &kp LSHFT    &none    &none          &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &none
+&none     &none      &kp RALT    &td_to_num    &td_to_nav   &none    &kp INSERT     &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none
+                                 &none         &none        &none    &kp ENTER      &kp BSPC   &kp DELETE
             >;
         };
 
@@ -381,17 +381,17 @@
 
         sym {
             bindings = <
-&kp TILDE          &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK      &kp LPAR               &kp RIGHT_BRACE    &none  &td_to_base      &td_to_extra       &td_to_tap    &td_reset  &td_boot
-&kp DOUBLE_QUOTES  &kp COLON       &kp DOLLAR       &kp PERCENT       &kp CARET              &kp PLUS           &none  &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp LEFT_ALT  &kp LGUI   &none
-&none              &kp LESS_THAN   &kp EXCLAMATION  &kp AT_SIGN       &kp POUND              &kp PIPE           &none  &td_to_sym       &td_to_sym2        &kp RALT      &none      &none
-                                                    &kp GREATER_THAN  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE     &none  &none            &none
+&kp TILDE          &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK      &kp LPAR               &kp RIGHT_BRACE    &none  &td_to_base  &td_to_extra  &td_to_tap  &td_reset  &td_boot
+&kp DOUBLE_QUOTES  &kp COLON       &kp DOLLAR       &kp PERCENT       &kp CARET              &kp PLUS           &none  &kp RSHIFT   &kp RCTRL     &kp LALT    &kp LGUI   &none
+&none              &kp LESS_THAN   &kp EXCLAMATION  &kp AT_SIGN       &kp POUND              &kp PIPE           &none  &td_to_sym   &td_to_sym2   &kp RALT    &none      &none
+                                                    &kp GREATER_THAN  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE     &none  &none        &none
             >;
         };
 
         func {
             bindings = <
-&none  &kp F12  &kp F7  &kp F8     &kp F9     &kp PRINTSCREEN    &none  &td_to_base  &td_to_extra  &td_to_tap  &trans    &trans
-&none  &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &none  &kp LSHIFT   &kp LCTRL     &kp LALT    &kp LGUI  &none
+&none  &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none  &td_to_base  &td_to_extra  &td_to_tap  &trans    &trans
+&none  &kp F11  &kp F4  &kp F5     &kp F6     &kp SLCK           &none  &kp LSHIFT   &kp LCTRL     &kp LALT    &kp LGUI  &none
 &none  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none  &td_to_func  &td_to_media  &kp RALT    &none     &none
                         &kp K_APP  &kp SPACE  &kp TAB            &none  &none        &none
             >;
@@ -399,19 +399,19 @@
 
         button {
             bindings = <
-&none  &kp LC(Z)     &kp LC(X)     &kp LC(C)  &kp LC(V)  &kp LC(LS(Z))    &kp LC(LS(Z))  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &none
-&none  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &none            &none          &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI   &none
-&none  &kp LC(Z)     &kp LC(X)     &kp LC(C)  &kp LC(V)  &kp LC(LS(Z))    &kp LC(LS(Z))  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &none
-                                   &none      &none      &none            &none          &none      &none
+&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(LS(Z))    &kp LC(LS(Z))  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &none
+&none  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none            &none          &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI   &none
+&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(LS(Z))    &kp LC(LS(Z))  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &none
+                             &none      &none      &none            &none          &none      &none
             >;
         };
 
         extra {
             bindings = <
-&kp GRAVE  &kp Q        &kp W        &kp E         &kp R          &kp T          &kp Y           &kp U              &kp I                &kp O        &kp P                &kp MINUS
-&cw_caps   &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G          &kp H           &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LALT L  &hmr LGUI SEMICOLON  &kp SQT
-&sk LSHFT  &lt_c 8 Z    &kp X        &kp C         &kp V          &kp B          &kp N           &kp M              &kp COMMA            &kp PERIOD   &lt_c 8 SLASH        &kp BACKSLASH
-                                     &lt_c 3 ESC   &lt_c 1 SPACE  &lt_c 2 TAB    &lt_c 5 RETURN  &lt_c 4 BACKSPACE  &lt_c 6 DELETE
+&kp GRAVE       &kp Q        &kp W        &kp E         &kp R          &kp T          &kp Y          &kp U         &kp I           &kp O        &kp P                &kp MINUS
+&cw_caps        &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G          &kp H          &hmr LSHFT J  &hmr LCTRL K    &hmr LALT L  &hmr LGUI SEMICOLON  &kp SQT
+&skShift_Hyper  &lt_c 7 Z    &kp X        &kp C         &kp V          &kp B          &kp N          &kp M         &kp COMMA       &kp PERIOD   &lt_c 7 SLASH        &kp BACKSLASH
+                                          &lt_c 3 ESC   &lt_c 1 SPACE  &lt_c 2 TAB    &lt_c 5 ENTER  &lt_c 4 BSPC  &lt_c 6 DELETE
             >;
 
             label = "qwerty_layout";
@@ -419,10 +419,10 @@
 
         tap {
             bindings = <
-&kp GRAVE       &kp Q  &kp W  &kp F    &kp P      &kp B      &kp J       &kp L     &kp U       &kp Y    &kp SEMI  &kp MINUS
-&cw_caps        &kp A  &kp R  &kp S    &kp T      &kp G      &kp M       &kp N     &kp E       &kp I    &kp O     &kp SQT
-&skShift_Hyper  &kp Z  &kp X  &kp C    &kp D      &kp V      &kp K       &kp H     &kp COMMA   &kp DOT  &kp FSLH  &kp BACKSLASH
-                              &kp ESC  &kp SPACE  &kp TAB    &kp RETURN  &kp BSPC  &kp DELETE
+&kp GRAVE       &kp Q  &kp W  &kp F    &kp P      &kp B      &kp J      &kp L     &kp U       &kp Y    &kp SEMI  &kp MINUS
+&cw_caps        &kp A  &kp R  &kp S    &kp T      &kp G      &kp M      &kp N     &kp E       &kp I    &kp O     &kp SQT
+&skShift_Hyper  &kp Z  &kp X  &kp C    &kp D      &kp V      &kp K      &kp H     &kp COMMA   &kp DOT  &kp FSLH  &kp BACKSLASH
+                              &kp ESC  &kp SPACE  &kp TAB    &kp ENTER  &kp BSPC  &kp DELETE
             >;
         };
     };
