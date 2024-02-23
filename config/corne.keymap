@@ -356,7 +356,7 @@
             bindings = <
 &kp GRAVE       &kp Q          &kp W          &kp F           &kp P           &kp B        &kp J        &kp L           &kp U           &kp Y          &kp SEMI       &kp MINUS
 &capsword_caps  &hrm_l LGUI A  &hrm_l LALT R  &hrm_l LCTRL S  &hrm_l LSHFT T  &kp G        &kp M        &hrm_r RSHFT N  &hrm_r RCTRL E  &hrm_r LALT I  &hrm_r LGUI O  &kp SQT
-&sk LEFT_SHIFT  &btn 7 Z       &kp X          &kp C           &kp D           &kp V        &kp K        &kp H           &kp COMMA       &kp DOT        &btn 7 SLASH   &kp BACKSLASH
+&shift_hyper    &btn 7 Z       &kp X          &kp C           &kp D           &kp V        &kp K        &kp H           &kp COMMA       &kp DOT        &btn 7 SLASH   &kp BACKSLASH
                                               &lt 3 ESCAPE    &lt 1 SPACE     &lt 2 TAB    &lt 5 ENTER  &lt 4 BSPC      &lt 6 DELETE
             >;
         };
