@@ -71,7 +71,7 @@ This repo contains the [ZMK firmware](https://zmk.dev) configuration files for m
 
 - Extra symbols layer (sym2)
 
-	In addition to Miryoku's stock symbol layer, I've also added an additional symbol layer labeled `sym2`, inspired by Pascal Getreuer's [Designing a Symbol Layer](https://getreuer.info/posts/keyboards/symbol-layer/index.html). However, maintaining the same symbols across multiple layers adds a lot of mental overhead, which is why this extra layer has largely gone unused. I'm still making changes, looking for ways to merge parts of this layer into the main `sym` layer through the use of combo keys. In the future, I plan on replacing this layer with a [mouse emulation](https://github.com/manna-harbour/miryoku/tree/master/docs/reference#mouse) layer as soon as mouse support is implemented in ZMK.
+	In addition to Miryoku's stock symbol layer, I've also added a symbol layer labeled `sym2`, inspired by Pascal Getreuer's [Designing a Symbol Layer](https://getreuer.info/posts/keyboards/symbol-layer/index.html). However, maintaining the same symbols across multiple layers adds a lot of mental overhead, which is why this extra layer has largely gone unused. I'm still making changes, looking for ways to merge parts of this layer into the main `sym` layer through the use of combo keys. In the future, I plan on replacing this layer with a [mouse emulation](https://github.com/manna-harbour/miryoku/tree/master/docs/reference#mouse) layer as soon as mouse support is implemented in ZMK.
 
 - Miryoku reference
 
