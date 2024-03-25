@@ -60,10 +60,11 @@ This repo contains the [ZMK firmware](https://zmk.dev) configuration files for m
 	Refer to the [hold-tap](https://zmk.dev/docs/behaviors/hold-tap) docs for detailed explanations of each option.
 
 	In short, if you find yourself accidentally triggering a modifier, consider increasing the tapping term to a range of 200-250ms.
-	- `tapping-term-ms = <225>;`.
+	- `tapping-term-ms = <225>;`
 
 	or changing the hold-tap flavor to tap-preferred: 
-	- `flavor = "tap-preferred";`.
+	- `flavor = "tap-preferred";`
+
 	For additional guidance:
 
 	> The most important tip I can give is to get into the habit of typing with quick, swift taps. The goal is to reduce the time between press and release to the minimum. Don’t focus on pressing keys, but on tapping keys. -- [precondition](https://precondition.github.io/home-row-mods#quick-swift-taps)
