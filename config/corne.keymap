@@ -393,10 +393,10 @@
 
         nav {
             bindings = <
-&to_boot  &to_reset  &to_tap   &to_extra  &to_base   &none    &kp LC(LS(Z))  &kp LC(V)  &kp LC(C)      &kp LC(X)    &kp LC(Z)  &none
-&none     &kp LGUI   &kp LALT  &kp LCTRL  &kp LSHFT  &none    &none          &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &none
-&none     &none      &kp RALT  &to_num    &to_nav    &none    &kp INSERT     &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none
-                               &none      &none      &none    &kp ENTER      &kp BSPC   &kp DELETE
+&to_boot  &to_reset  &to_tap   &to_extra  &to_base   &none    &kp LC(LS(Z))   &kp LC(V)  &kp LC(C)      &kp LC(X)    &kp LC(Z)  &none
+&none     &kp LGUI   &kp LALT  &kp LCTRL  &kp LSHFT  &none    &capsword_caps  &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &none
+&none     &none      &kp RALT  &to_num    &to_nav    &none    &kp INSERT      &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none
+                               &none      &none      &none    &kp ENTER       &kp BSPC   &kp DELETE
             >;
         };
 
