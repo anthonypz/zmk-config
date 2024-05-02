@@ -134,14 +134,6 @@
             key-positions = <27 28>;
             layers = <7 8>;
         };
-
-        sticky_shift {
-            bindings = <&sk LSHIFT>;
-            key-positions = <16 19>;
-            require-prior-idle-ms = <200>;
-            layers = <0 1>;
-            timeout-ms = <80>;
-        };
     };
 
     behaviors {
