@@ -346,10 +346,10 @@
             //                    | ESC | SPC | TAB |   | ENT | BKSP | DEL |
 
             bindings = <
-&kp GRAVE    &kp Q          &kp W          &kp F           &kp P           &kp B        &kp J        &kp L           &kp U           &kp Y          &kp SEMI       &kp MINUS
-&kp LC(TAB)  &hrm_l LGUI A  &hrm_l LALT R  &hrm_l LCTRL S  &hrm_l LSHFT T  &kp G        &kp M        &hrm_r RSHFT N  &hrm_r RCTRL E  &hrm_r LALT I  &hrm_r LGUI O  &kp SQT
-&kp LA(TAB)  &btn 3 Z       &kp X          &kp C           &kp D           &kp V        &kp K        &kp H           &kp COMMA       &kp DOT        &btn 3 SLASH   &kp BACKSLASH
-                                           &lt 6 ESCAPE    &lt 4 SPACE     &lt 5 TAB    &lt 8 ENTER  &lt 7 BSPC      &lt 9 DELETE
+&kp GRAVE             &kp Q          &kp W          &kp F           &kp P           &kp B        &kp J        &kp L           &kp U           &kp Y          &kp SEMI       &kp MINUS
+&key_repeat           &hrm_l LGUI A  &hrm_l LALT R  &hrm_l LCTRL S  &hrm_l LSHFT T  &kp G        &kp M        &hrm_r RSHFT N  &hrm_r RCTRL E  &hrm_r LALT I  &hrm_r LGUI O  &kp SQT
+&sk LS(LA(LC(LGUI)))  &btn 3 Z       &kp X          &kp C           &kp D           &kp V        &kp K        &kp H           &kp COMMA       &kp DOT        &btn 3 SLASH   &kp BACKSLASH
+                                                    &lt 6 ESCAPE    &lt 4 SPACE     &lt 5 TAB    &lt 8 ENTER  &lt 7 BSPC      &lt 9 DELETE
             >;
         };
 
