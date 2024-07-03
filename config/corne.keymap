@@ -382,9 +382,9 @@
             //                    | ESC | SPC | TAB |   | ENT | BKSP | DEL |
 
             bindings = <
-&kp GRAVE   &kp Q          &kp W          &kp F           &kp P           &kp B        &kp J        &kp L           &kp U           &kp Y          &kp SEMI       &kp MINUS
-&caps_word  &hrm_l LGUI A  &hrm_l LALT R  &hrm_l LCTRL S  &hrm_l LSHFT T  &kp G        &kp M        &hrm_r RSHFT N  &hrm_r RCTRL E  &hrm_r LALT I  &hrm_r LGUI O  &kp SQT
-&sk LSHIFT  &btn 3 Z       &kp X          &kp C           &kp D           &kp V        &kp K        &kp H           &kp COMMA       &kp DOT        &btn 3 SLASH   &kp BACKSLASH
+&kp GRAVE   &kp B          &kp L          &kp D           &kp W           &kp Z        &sqt_under   &kp F           &kp O           &kp U          &kp J          &kp SEMI
+&caps_word  &hrm_l LGUI N  &hrm_l LALT R  &hrm_l LCTRL T  &hrm_l LSHFT S  &kp G        &kp Y        &hrm_r RSHFT H  &hrm_r RCTRL A  &hrm_r LALT E  &hrm_r LGUI I  &comma_question
+&sk LSHIFT  &btn 3 Q       &kp X          &kp M           &kp C           &kp V        &kp K        &kp P           &kp PERIOD      &minus_dqt     &btn 3 FSLH    &kp EQUAL
                                           &lt 6 ESCAPE    &lt 4 SPACE     &lt 5 TAB    &lt 8 ENTER  &lt 7 BSPC      &lt 9 DELETE
             >;
         };
