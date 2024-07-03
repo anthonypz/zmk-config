@@ -340,6 +340,17 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
+
+        btn2: btn2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BTN2";
+            bindings = <&mo>, <&fslash_lt>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <50>;
+        };
     };
 
     macros {
@@ -384,7 +395,7 @@
             bindings = <
 &kp GRAVE   &kp B          &kp L          &kp D           &kp W           &kp Z        &sqt_under   &kp F           &kp O           &kp U          &kp J          &kp SEMI
 &caps_word  &hrm_l LGUI N  &hrm_l LALT R  &hrm_l LCTRL T  &hrm_l LSHFT S  &kp G        &kp Y        &hrm_r RSHFT H  &hrm_r RCTRL A  &hrm_r LALT E  &hrm_r LGUI I  &comma_question
-&sk LSHIFT  &btn 3 Q       &kp X          &kp M           &kp C           &kp V        &kp K        &kp P           &kp PERIOD      &minus_dqt     &btn 3 FSLH    &kp EQUAL
+&sk LSHIFT  &btn 3 Q       &kp X          &kp M           &kp C           &kp V        &kp K        &kp P           &kp PERIOD      &minus_dqt     &btn2 3 FSLH   &kp EQUAL
                                           &lt 6 ESCAPE    &lt 4 SPACE     &lt 5 TAB    &lt 8 ENTER  &lt 7 BSPC      &lt 9 DELETE
             >;
         };
