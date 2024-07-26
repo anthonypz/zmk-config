@@ -160,15 +160,6 @@
             bindings = <&none>, <&to_boot>;
         };
 
-        autoshft: autoshift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "AUTOSHIFT_HOLD_TAP";
-            bindings = <&shift>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <190>;
-        };
-
         hrm_l: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_LEFT_HAND";
@@ -226,7 +217,7 @@
             require-prior-idle-ms = <50>;
         };
 
-        to_base: tto_base {
+        to_base: to_base {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_TO_BASE";
             #binding-cells = <0>;
