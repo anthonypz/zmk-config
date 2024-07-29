@@ -379,16 +379,16 @@
         compatible = "zmk,keymap";
 
         base {
-            // -----------------------------------------------------------------------------------------
-            // |   `   |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  |  -   |
-            // |cw_caps|  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
-            // | skSHFT|  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  |  \   |
+            // -------------------------------GRAPHITE------------------------------------------
+            // |   `   |  B  |  L  |  D  |  W  |  Z  |   |  '  |  F   |  O  |  U  |  J  |  ;   |
+            // |cw_caps|  N  |  R  |  T  |  S  |  G  |   |  Y  |  H   |  A  |  E  |  I  |  ,   |
+            // | skSHFT|  Q  |  X  |  M  |  C  |  V  |   |  K  |  P   |  .  |  -  |  /  |  \   |
             //                    | ESC | SPC | TAB |   | ENT | BKSP | DEL |
 
             bindings = <
-&kp GRAVE   &kp B          &kp L          &kp D           &kp W           &kp Z        &sqt_under   &kp F           &kp O           &kp U          &kp J          &kp SEMI
-&caps_word  &hrm_l LGUI N  &hrm_l LALT R  &hrm_l LCTRL T  &hrm_l LSHFT S  &kp G        &kp Y        &hrm_r RSHFT H  &hrm_r RCTRL A  &hrm_r LALT E  &hrm_r LGUI I  &comma_question
-&sk LSHIFT  &btn 3 Q       &kp X          &kp M           &kp C           &kp V        &kp K        &kp P           &kp PERIOD      &minus_dqt     &btn2 3 FSLH   &kp BACKSLASH
+&kp GRAVE       &kp B          &kp L          &kp D           &kp W           &kp Z        &sqt_under   &kp F           &kp O           &kp U          &kp J          &kp SEMI
+&capsword_caps  &hrm_l LGUI N  &hrm_l LALT R  &hrm_l LCTRL T  &hrm_l LSHFT S  &kp G        &kp Y        &hrm_r RSHFT H  &hrm_r RCTRL A  &hrm_r LALT E  &hrm_r LGUI I  &comma_question
+&sk LSHIFT      &btn 3 Q       &kp X          &kp M           &kp C           &kp V        &kp K        &kp P           &kp PERIOD      &minus_dqt     &btn2 3 FSLH   &kp BACKSLASH
                                           &lt 6 ESCAPE    &lt 4 SPACE     &lt 5 TAB    &lt 8 ENTER  &lt 7 BSPC      &lt 9 DELETE
             >;
         };
