@@ -358,7 +358,8 @@
         lt_del: lt_del {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_DELETE";
-            bindings = <&mo >;
+            bindings = <&mo>, <&kp>;
+
             #binding-cells = <2>;
             flavor = "tap-preferred";
             quick-tap-ms = <50>;
