@@ -144,6 +144,12 @@
             key-positions = <37 40>;
             layers = <0 2 1>;
         };
+
+        grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <0 12>;
+            layers = <0 2 1>;
+        };
     };
 
     behaviors {
@@ -394,7 +400,7 @@
             //                    | ESC | SPC | TAB |   | ENT | BKSP | DEL |
 
             bindings = <
-&kp GRAVE         &kp B          &kp L          &kp D           &kp W           &kp Z        &sqt_under   &kp F           &kp O           &kp U          &kp J          &kp SEMI
+&kp TAB           &kp B          &kp L          &kp D           &kp W           &kp Z        &sqt_under   &kp F           &kp O           &kp U          &kp J          &kp SEMI
 &sk LEFT_CONTROL  &hrm_l LGUI N  &hrm_l LALT R  &hrm_l LCTRL T  &hrm_l LSHFT S  &kp G        &kp Y        &hrm_r RSHFT H  &hrm_r RCTRL A  &hrm_r LALT E  &hrm_r LGUI I  &comma_question
 &sk LSHIFT        &btn 3 Q       &kp X          &kp M           &kp C           &kp V        &kp K        &kp P           &kp PERIOD      &minus_dqt     &btn2 3 FSLH   &kp BACKSLASH
                                                 &lt 6 ESCAPE    &lt 4 SPACE     &lt 5 TAB    &lt 8 ENTER  &lt_del 7 BSPC  &lt 9 DELETE
@@ -461,19 +467,19 @@
 
         num {
             bindings = <
-&none       &kp LBKT   &kp N7  &kp N8      &kp N9  &kp RBKT         &none  &to_base   &to_extra  &to_tap   &to_reset  &to_boot
+&kp GRAVE   &kp LBKT   &kp N7  &kp N8      &kp N9  &kp RBKT         &none  &to_base   &to_extra  &to_tap   &to_reset  &to_boot
 &comma_spc  &kp SEMI   &kp N4  &kp N5      &kp N6  &kp EQUAL        &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI   &none
-&none       &kp GRAVE  &kp N1  &kp N2      &kp N3  &kp BACKSLASH    &none  &to_num    &to_nav    &kp RALT  &none      &none
+&none       &kp COMMA  &kp N1  &kp N2      &kp N3  &kp BACKSLASH    &none  &to_num    &to_nav    &kp RALT  &none      &none
                                &kp PERIOD  &kp N0  &kp MINUS        &none  &none      &none
             >;
         };
 
         sym {
             bindings = <
-&none   &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK      &kp LPAR               &kp RIGHT_BRACE    &none  &to_base    &to_extra  &to_tap   &to_reset  &to_boot
-&trans  &kp COLON       &kp DOLLAR       &kp PERCENT       &kp CARET              &plus_equal        &none  &kp RSHIFT  &kp RCTRL  &kp LALT  &kp LGUI   &none
-&none   &kp TILDE       &kp EXCLAMATION  &kp AT_SIGN       &kp POUND              &kp PIPE           &none  &to_sym     &to_sym2   &kp RALT  &none      &none
-                                         &kp GREATER_THAN  &kp RIGHT_PARENTHESIS  &under_minus       &none  &none       &none
+&kp TILDE  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK      &kp LPAR               &kp RIGHT_BRACE    &none  &to_base    &to_extra  &to_tap   &to_reset  &to_boot
+&trans     &kp COLON       &kp DOLLAR       &kp PERCENT       &kp CARET              &plus_equal        &none  &kp RSHIFT  &kp RCTRL  &kp LALT  &kp LGUI   &none
+&trans     &kp LESS_THAN   &kp EXCLAMATION  &kp AT_SIGN       &kp POUND              &kp PIPE           &none  &to_sym     &to_sym2   &kp RALT  &none      &none
+                                            &kp GREATER_THAN  &kp RIGHT_PARENTHESIS  &under_minus       &none  &none       &none
             >;
         };
 
