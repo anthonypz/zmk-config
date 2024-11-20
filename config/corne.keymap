@@ -155,10 +155,21 @@
             layers = <0 2 1>;
         };
 
-        grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <0 12>;
-            layers = <0 2 1>;
+        gs {
+            bindings = <&gs>;
+            key-positions = <17 16>;
+            layers = <0 2>;
+        };
+
+        hy {
+            bindings = <&hy>;
+            key-positions = <19 18 19>;
+            layers = <0 2>;
+        };
+
+        repeat {
+            bindings = <&key_repeat>;
+            key-positions = <39 40>;
         };
     };
 
@@ -381,16 +392,6 @@
             quick-tap-ms = <150>;
             tapping-term-ms = <200>;
         };
-
-        lt_kr: lt_kr {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_KEYREPEAT";
-            bindings = <&mo>, <&key_repeat>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-        };
     };
 
     macros {
@@ -407,6 +408,20 @@
             bindings = <&kp DOT &kp SPACE &sk LEFT_SHIFT>;
             label = "COMMA_STCKYSHFT";
         };
+
+        gs: gs {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp S>;
+            label = "GS";
+        };
+
+        hy: ph {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp H &kp Y>;
+            label = "PH";
+        };
     };
 
     keymap {
@@ -420,10 +435,10 @@
             //                    | ESC | SPC | TAB |   | ENT | BKSP | DEL |
 
             bindings = <
-&kp ESC           &kp B          &kp L          &kp D           &kp W           &kp Z        &sqt_under   &kp F           &kp O           &kp U          &kp J          &kp SEMI
+&kp GRAVE         &kp B          &kp L          &kp D           &kp W           &kp Z        &sqt_under   &kp F           &kp O           &kp U          &kp J          &kp SEMI
 &sk LEFT_CONTROL  &hrm_l LGUI N  &hrm_l LALT R  &hrm_l LCTRL T  &hrm_l LSHFT S  &kp G        &kp Y        &hrm_r RSHFT H  &hrm_r RCTRL A  &hrm_r LALT E  &hrm_r LGUI I  &comma_question
 &sk LEFT_SHIFT    &btn 3 Q       &kp X          &kp M           &kp C           &kp V        &kp K        &kp P           &kp PERIOD      &minus_dqt     &btn2 3 FSLH   &kp BACKSLASH
-                                                &lt_kr 6 0      &lt 4 SPACE     &lt 5 TAB    &lt 8 ENTER  &lt_del 7 BSPC  &lt 9 DELETE
+                                                &lt 6 ESC       &lt 4 SPACE     &lt 5 TAB    &lt 8 ENTER  &lt_del 7 BSPC  &lt 9 DELETE
             >;
         };
 
@@ -440,10 +455,10 @@
 
         tap {
             bindings = <
-&trans  &kp B  &kp L  &kp D        &kp W      &kp Z      &sqt_under  &kp F     &kp O       &kp U       &kp J       &kp SEMI
-&trans  &kp N  &kp R  &kp T        &kp S      &kp G      &kp Y       &kp H     &kp A       &kp E       &kp I       &comma_question
-&trans  &kp Q  &kp X  &kp M        &kp C      &kp V      &kp K       &kp P     &kp PERIOD  &minus_dqt  &fslash_lt  &kp EQUAL
-                      &key_repeat  &kp SPACE  &kp TAB    &kp ENTER   &kp BSPC  &kp DELETE
+&trans  &kp B  &kp L  &kp D    &kp W      &kp Z      &sqt_under  &kp F     &kp O       &kp U       &kp J       &kp SEMI
+&trans  &kp N  &kp R  &kp T    &kp S      &kp G      &kp Y       &kp H     &kp A       &kp E       &kp I       &comma_question
+&trans  &kp Q  &kp X  &kp M    &kp C      &kp V      &kp K       &kp P     &kp PERIOD  &minus_dqt  &fslash_lt  &kp EQUAL
+                      &kp ESC  &kp SPACE  &kp TAB    &kp ENTER   &kp BSPC  &kp DELETE
             >;
 
             label = "TAP_ONLY";
