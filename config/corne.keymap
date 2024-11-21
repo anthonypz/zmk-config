@@ -183,6 +183,11 @@
             key-positions = <4 5>;
             layers = <0 2 1>;
         };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <30 31>;
+        };
     };
 
     behaviors {
@@ -467,10 +472,10 @@
 
         tap {
             bindings = <
-&trans  &kp B  &kp L  &kp D    &kp W      &kp Z      &sqt_under  &kp F        &kp O       &kp U       &kp J       &kp SEMI
-&trans  &kp N  &kp R  &kp T    &kp S      &kp G      &kp Y       &kp H        &kp A       &kp E       &kp I       &comma_question
-&trans  &kp Q  &kp X  &kp M    &kp C      &kp V      &kp K       &kp P        &kp PERIOD  &minus_dqt  &fslash_lt  &kp EQUAL
-                      &kp ESC  &kp SPACE  &kp TAB    &kp ENTER   &key_repeat  &kp DELETE
+&trans  &kp B  &kp L  &kp D    &kp W      &kp Z      &sqt_under   &kp F     &kp O       &kp U       &kp J       &kp SEMI
+&trans  &kp N  &kp R  &kp T    &kp S      &kp G      &kp Y        &kp H     &kp A       &kp E       &kp I       &comma_question
+&trans  &kp Q  &kp X  &kp M    &kp C      &kp V      &kp K        &kp P     &kp PERIOD  &minus_dqt  &fslash_lt  &kp EQUAL
+                      &kp ESC  &kp SPACE  &kp TAB    &key_repeat  &kp BSPC  &kp DELETE
             >;
 
             label = "TAP_ONLY";
