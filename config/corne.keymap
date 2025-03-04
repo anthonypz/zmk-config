@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
- #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -158,18 +158,6 @@
             layers = <0 2 1>;
         };
 
-        gs {
-            bindings = <&gs>;
-            key-positions = <17 16>;
-            layers = <0 2>;
-        };
-
-        hy {
-            bindings = <&hy>;
-            key-positions = <19 18 19>;
-            layers = <0 2>;
-        };
-
         bspace {
             bindings = <&kp BSPC>;
             key-positions = <6 7>;
@@ -178,13 +166,13 @@
 
         delete {
             bindings = <&kp DEL>;
-            key-positions = <4 5>;
+            key-positions = <7 8>;
             layers = <0 2 1>;
         };
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <30 31>;
+            key-positions = <18 19>;
             layers = <0 1 2>;
         };
     };
@@ -394,6 +382,16 @@
             quick-tap-ms = <150>;
             tapping-term-ms = <200>;
         };
+
+        lt_repeat: lt_repeat {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_REPEAT";
+            bindings = <&mo>, <&key_repeat>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     macros {
@@ -410,20 +408,6 @@
             bindings = <&kp DOT &kp SPACE &sk LEFT_SHIFT>;
             label = "COMMA_STCKYSHFT";
         };
-
-        gs: gs {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp G &kp S>;
-            label = "GS";
-        };
-
-        hy: ph {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp H &kp Y>;
-            label = "PH";
-        };
     };
 
     keymap {
@@ -437,10 +421,10 @@
             //                    | ESC | SPC | TAB |   | ENT | BKSP | DEL |
 
             bindings = <
-&kp GRAVE         &kp B          &kp L          &kp D           &kp W           &kp Z        &sqt_under   &kp F           &kp O           &kp U          &kp J          &kp SEMI
-&sk LEFT_CONTROL  &hrm_l LGUI N  &hrm_l LALT R  &hrm_l LCTRL T  &hrm_l LSHFT S  &kp G        &kp Y        &hrm_r RSHFT H  &hrm_r RCTRL A  &hrm_r LALT E  &hrm_r LGUI I  &comma_question
-&sk LEFT_SHIFT    &btn 3 Q       &kp X          &kp M           &kp C           &kp V        &kp K        &kp P           &kp PERIOD      &minus_dqt     &btn2 3 FSLH   &kp BACKSLASH
-                                                &lt 6 ESC       &lt 4 SPACE     &lt 5 TAB    &lt 8 ENTER  &lt_del 7 BSPC  &lt 9 DELETE
+&kp GRAVE         &kp B          &kp L          &kp D           &kp W           &kp Z        &sqt_under      &kp F           &kp O           &kp U          &kp J          &kp SEMI
+&sk LEFT_CONTROL  &hrm_l LGUI N  &hrm_l LALT R  &hrm_l LCTRL T  &hrm_l LSHFT S  &kp G        &kp Y           &hrm_r RSHFT H  &hrm_r RCTRL A  &hrm_r LALT E  &hrm_r LGUI I  &comma_question
+&sk LEFT_SHIFT    &btn 3 Q       &kp X          &kp M           &kp C           &kp V        &kp K           &kp P           &kp PERIOD      &minus_dqt     &btn2 3 FSLH   &kp BACKSLASH
+                                                &lt 6 ESC       &lt 4 SPACE     &lt 5 TAB    &lt_repeat 8 0  &lt_del 7 BSPC  &lt 9 DELETE
             >;
         };
 
@@ -489,7 +473,7 @@
 &none  &none     &to_tap   &to_extra  &to_base   &none    &trans     &trans          &trans          &trans        &trans           &none
 &none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
 &none  &none     &kp RALT  &to_sym    &none      &none    &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-                             &none    &none      &none    &mkp RCLK  &mkp LCLK       &mkp MCLK
+                           &none      &none      &none    &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
 
