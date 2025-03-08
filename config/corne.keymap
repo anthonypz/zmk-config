@@ -53,36 +53,42 @@
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <2 3>;
             layers = <7 8>;
+            require-prior-idle-ms = <75>;
         };
 
         r_bracket2 {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <3 4>;
             layers = <7 8>;
+            require-prior-idle-ms = <75>;
         };
 
         l_paren {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <14 15>;
             layers = <7 8>;
+            require-prior-idle-ms = <75>;
         };
 
         r_paren {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <15 16>;
             layers = <7 8>;
+            require-prior-idle-ms = <75>;
         };
 
         l_brace {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <26 27>;
             layers = <7 8>;
+            require-prior-idle-ms = <75>;
         };
 
         r_brace {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <27 28>;
             layers = <7 8>;
+            require-prior-idle-ms = <75>;
         };
 
         auto_cap {
@@ -367,10 +373,10 @@
 
         tap {
             bindings = <
-&trans  &kp B  &kp L  &kp D    &kp W      &kp Z      &sqt_under   &kp F     &kp O       &kp U       &kp J       &trans
-&trans  &kp N  &kp R  &kp T    &kp S      &kp G      &kp Y        &kp H     &kp A       &kp E       &kp I       &trans
-&trans  &kp Q  &kp X  &kp M    &kp C      &kp V      &kp K        &kp P     &kp PERIOD  &minus_dqt  &fslash_lt  &trans
-                      &kp ESC  &kp SPACE  &kp TAB    &key_repeat  &kp BSPC  &kp DELETE
+&trans  &kp B  &kp L  &kp D   &kp W   &kp Z     &sqt_under  &kp F   &kp O       &kp U       &kp J       &trans
+&trans  &kp N  &kp R  &kp T   &kp S   &kp G     &kp Y       &kp H   &kp A       &kp E       &kp I       &trans
+&trans  &kp Q  &kp X  &kp M   &kp C   &kp V     &kp K       &kp P   &kp PERIOD  &minus_dqt  &fslash_lt  &trans
+                      &trans  &trans  &trans    &trans      &trans  &trans
             >;
 
             label = "TAP_ONLY";
