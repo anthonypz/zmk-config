@@ -112,7 +112,6 @@
     behaviors {
         hrm_l: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_LEFT_HAND";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -126,7 +125,6 @@
 
         hrm_r: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_RIGHT_HAND";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -140,7 +138,6 @@
 
         capsword_caps: capsword_caps {
             compatible = "zmk,behavior-mod-morph";
-            label = "CAPSWORD_CAPSLOCK";
             bindings = <&caps_word>, <&kp CAPS>;
 
             #binding-cells = <0>;
@@ -149,7 +146,6 @@
 
         out_tog_usb: output_toggle {
             compatible = "zmk,behavior-mod-morph";
-            label = "OUTPUT-TOGGLE_OUTPUT-USB";
             bindings = <&out OUT_TOG>, <&out OUT_USB>;
 
             #binding-cells = <0>;
@@ -158,7 +154,6 @@
 
         btn: button_layer_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "BUTTON_LAYER_LEFT";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
@@ -170,70 +165,60 @@
 
         to_base: to_base {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAPDANCE_TO_BASE";
             #binding-cells = <0>;
             bindings = <&none>, <&to 0>;
         };
 
         to_extra: to_extra {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAPDANCE_TO_EXTRA";
             #binding-cells = <0>;
             bindings = <&none>, <&to 1>;
         };
 
         to_tap: to_tap {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAPDANCE_TO_TAP_LAYER";
             #binding-cells = <0>;
             bindings = <&none>, <&to 2>;
         };
 
         to_nav: to_nav {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAPDANCE_TO_NAV";
             #binding-cells = <0>;
             bindings = <&none>, <&to 4>;
         };
 
         to_mouse: to_mouse {
             compatible = "zmk,behavior-tap-dance";
-            label = "TO_MOUSE";
             #binding-cells = <0>;
             bindings = <&none>, <&to 5>;
         };
 
         to_media: to_media {
             compatible = "zmk,behavior-tap-dance";
-            label = "TO_MEDIA";
             #binding-cells = <0>;
             bindings = <&none>, <&to 6>;
         };
 
         to_num: to_num {
             compatible = "zmk,behavior-tap-dance";
-            label = "TO_NUM";
             #binding-cells = <0>;
             bindings = <&none>, <&to 7>;
         };
 
         to_sym: to_sym {
             compatible = "zmk,behavior-tap-dance";
-            label = "TO_SYM";
             #binding-cells = <0>;
             bindings = <&none>, <&to 8>;
         };
 
         to_func: to_func {
             compatible = "zmk,behavior-tap-dance";
-            label = "TO_FUNC";
             #binding-cells = <0>;
             bindings = <&none>, <&to 9>;
         };
 
         plus_equal: plus_equal {
             compatible = "zmk,behavior-mod-morph";
-            label = "PLUS_EQUAL";
             bindings = <&kp PLUS>, <&kp EQUAL>;
 
             #binding-cells = <0>;
@@ -242,7 +227,6 @@
 
         under_minus: under_minus {
             compatible = "zmk,behavior-mod-morph";
-            label = "UNDER_MINUS";
             bindings = <&kp UNDER>, <&kp KP_MINUS>;
 
             #binding-cells = <0>;
@@ -251,7 +235,6 @@
 
         sqt_under: sqt_under {
             compatible = "zmk,behavior-mod-morph";
-            label = "SQT_UNDER";
             bindings = <&kp SINGLE_QUOTE>, <&kp UNDER>;
 
             #binding-cells = <0>;
@@ -260,7 +243,6 @@
 
         minus_dqt: minus_dqt {
             compatible = "zmk,behavior-mod-morph";
-            label = "MINUS_DQT";
             bindings = <&kp MINUS>, <&kp DOUBLE_QUOTES>;
 
             #binding-cells = <0>;
@@ -269,7 +251,6 @@
 
         fslash_lt: fslash_lt {
             compatible = "zmk,behavior-mod-morph";
-            label = "FSLASH_LT";
             bindings = <&kp SLASH>, <&kp LESS_THAN>;
 
             #binding-cells = <0>;
@@ -278,7 +259,6 @@
 
         comma_question: comma_question {
             compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_QUESTION";
             bindings = <&kp COMMA>, <&kp QUESTION>;
 
             #binding-cells = <0>;
@@ -287,7 +267,6 @@
 
         btn2: btn_layer_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "BTN_LAYER_RIGHT";
             bindings = <&mo>, <&fslash_lt>;
 
             #binding-cells = <2>;
@@ -323,14 +302,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&comma_question &kp SPACE>;
-            label = "COMMA_SPC";
         };
 
-        auto_cap: comma_stckyshft {
+        auto_cap: comma_stickyshift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp DOT &kp SPACE &sk LEFT_SHIFT>;
-            label = "COMMA_STCKYSHFT";
         };
     };
 
@@ -339,9 +316,9 @@
 
         base {
             // -------------------------------GRAPHITE------------------------------------------
-            // |   `   |  B  |  L  |  D  |  W  |  Z  |   |  '  |  F   |  O  |  U  |  J  |  ;   |
-            // |cw_caps|  N  |  R  |  T  |  S  |  G  |   |  Y  |  H   |  A  |  E  |  I  |  ,   |
-            // | skSHFT|  Q  |  X  |  M  |  C  |  V  |   |  K  |  P   |  .  |  -  |  /  |  \   |
+            // |   `    |  B  |  L  |  D  |  W  |  Z  |   |  '  |  F   |  O  |  U  |  J  |  ;   |
+            // |LC(BSPC)|  N  |  R  |  T  |  S  |  G  |   |  Y  |  H   |  A  |  E  |  I  |  ,   |
+            // | skSHFT |  Q  |  X  |  M  |  C  |  V  |   |  K  |  P   |  .  |  -  |  /  |  \   |
             //                    | ESC | SPC | TAB |   | ENT | BKSP | DEL |
 
             bindings = <
@@ -350,6 +327,8 @@
 &sk LEFT_SHIFT  &btn 3 Q       &kp X          &kp M           &kp C           &kp V        &kp K        &kp P            &kp PERIOD        &minus_dqt     &btn2 3 FSLH   &kp BACKSLASH
                                               &lt 6 ESC       &lt 4 SPACE     &lt 5 TAB    &lt 8 ENTER  &lt_bspc 7 BSPC  &lt_del 9 DELETE
             >;
+
+            display-name = "Base";
         };
 
         extra {
@@ -360,7 +339,7 @@
                          &trans  &trans  &trans    &trans  &trans          &trans
             >;
 
-            label = "qwerty_layout";
+            display-name = "Qwerty";
         };
 
         tap {
@@ -371,7 +350,7 @@
                       &trans  &trans  &trans    &trans      &trans  &trans
             >;
 
-            label = "TAP_ONLY";
+            display-name = "Tap";
         };
 
         button {
@@ -381,6 +360,8 @@
 &none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(LS(Z))    &kp LC(LS(Z))  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &none
                              &none      &none      &none            &none          &none      &none
             >;
+
+            display-name = "Button";
         };
 
         nav {
@@ -390,6 +371,8 @@
 &none        &none       &kp RALT  &to_num    &none      &none    &kp INSERT      &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none
                                    &none      &none      &none    &kp ENTER       &kp BSPC   &kp DELETE
             >;
+
+            display-name = "Nav";
         };
 
         mouse {
@@ -399,6 +382,8 @@
 &none  &none     &kp RALT  &to_sym    &none      &none    &none          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
                            &none      &none      &none    &mkp RCLK      &mkp LCLK       &mkp MCLK
             >;
+
+            display-name = "Mouse";
         };
 
         media {
@@ -408,6 +393,8 @@
 &none  &none     &kp RALT  &to_func   &none      &none    &bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4
                            &none      &none      &none    &kp C_STOP      &kp C_PP      &kp C_MUTE
             >;
+
+            display-name = "Media";
         };
 
         num {
@@ -417,6 +404,8 @@
 &none       &kp COMMA  &kp N1  &kp N2      &kp N3  &kp BACKSLASH    &none  &none      &to_nav    &kp RALT  &none       &none
                                &kp PERIOD  &kp N0  &kp MINUS        &none  &none      &none
             >;
+
+            display-name = "Num";
         };
 
         sym {
@@ -426,6 +415,8 @@
 &none       &kp LESS_THAN   &kp EXCLAMATION  &kp AT_SIGN       &kp POUND              &kp PIPE           &none  &none      &to_mouse  &kp RALT  &none     &none
                                              &kp GREATER_THAN  &kp RIGHT_PARENTHESIS  &under_minus       &none  &none      &none
             >;
+
+            display-name = "Sym";
         };
 
         func {
@@ -435,6 +426,8 @@
 &none  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none  &none      &to_media  &kp RALT  &none     &none
                         &kp K_APP  &kp SPACE  &kp TAB            &none  &none      &none
             >;
+
+            display-name = "Func";
         };
 
         num2 {
@@ -444,6 +437,8 @@
 &none  &none   &none   &none   &none      &none     &none   &kp N1  &kp N2  &kp N3  &none   &none
                        &none   &none      &none     &none   &none   &none
             >;
+
+            display-name = "Num2";
         };
     };
 
