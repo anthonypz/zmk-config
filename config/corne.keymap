@@ -53,6 +53,7 @@
             key-positions = <2 3>;
             layers = <7 8>;
             require-prior-idle-ms = <130>;
+            timeout-ms = <40>;
         };
 
         r_bracket2 {
@@ -60,6 +61,7 @@
             key-positions = <3 4>;
             layers = <7 8>;
             require-prior-idle-ms = <130>;
+            timeout-ms = <40>;
         };
 
         l_paren {
@@ -67,6 +69,7 @@
             key-positions = <14 15>;
             layers = <7 8>;
             require-prior-idle-ms = <130>;
+            timeout-ms = <40>;
         };
 
         r_paren {
@@ -74,6 +77,7 @@
             key-positions = <15 16>;
             layers = <7 8>;
             require-prior-idle-ms = <130>;
+            timeout-ms = <40>;
         };
 
         l_brace {
@@ -81,6 +85,7 @@
             key-positions = <26 27>;
             layers = <7 8>;
             require-prior-idle-ms = <130>;
+            timeout-ms = <40>;
         };
 
         r_brace {
@@ -88,6 +93,7 @@
             key-positions = <27 28>;
             layers = <7 8>;
             require-prior-idle-ms = <130>;
+            timeout-ms = <40>;
         };
 
         auto_cap {
@@ -432,10 +438,10 @@
 
         num2 {
             bindings = <
-&none  &kp N1  &kp N2  &kp N3  &kp N4     &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
-&none  &none   &none   &none   &kp LSHFT  &none     &none   &kp N4  &kp N5  &kp N6  &none   &none
-&none  &none   &none   &none   &none      &none     &none   &kp N1  &kp N2  &kp N3  &none   &none
-                       &none   &none      &none     &none   &none   &none
+&none  &kp N1  &kp N2  &kp N3  &kp N4     &kp N5    &kp N6  &kp N7         &kp N8  &kp N9  &kp N0  &none
+&none  &none   &none   &none   &kp LSHFT  &none     &none   &mt LSHIFT N4  &kp N5  &kp N6  &none   &none
+&none  &none   &none   &none   &none      &none     &none   &kp N1         &kp N2  &kp N3  &none   &none
+                       &none   &none      &none     &none   &none          &none
             >;
 
             display-name = "Num2";
