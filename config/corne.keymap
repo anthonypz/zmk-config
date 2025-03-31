@@ -188,7 +188,6 @@
             layers = <0 1 2>;
             require-prior-idle-ms = <75>;
         };
-
     };
 
     behaviors {
@@ -304,7 +303,7 @@
             bindings = <&kp PLUS>, <&kp EQUAL>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         under_minus: under_minus {
@@ -312,7 +311,7 @@
             bindings = <&kp UNDER>, <&kp KP_MINUS>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         sqt_under: sqt_under {
@@ -448,10 +447,10 @@
 
         nav {
             bindings = <
-&bootloader  &sys_reset  &to_tap   &to_extra  &to_base   &none    &kp LC(LS(Z))   &kp LC(V)  &kp LC(C)      &kp LC(X)    &kp LC(Z)  &none
-&none        &kp LGUI    &kp LALT  &kp LCTRL  &kp LSHFT  &none    &capsword_caps  &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &none
-&none        &none       &kp RALT  &to_num    &none      &none    &kp INSERT      &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none
-                                   &none      &none      &none    &kp ENTER       &kp BSPC   &kp DELETE
+&none  &kp GRAVE          &to_tap   &to_extra  &to_base   &sys_reset     &kp LC(LS(Z))   &kp LC(V)  &kp LC(C)      &kp LC(X)    &kp LC(Z)  &none
+&none  &mt LGUI LC(BSPC)  &kp LALT  &kp LCTRL  &kp LSHFT  &bootloader    &capsword_caps  &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &none
+&none  &sk LSHFT          &kp RALT  &to_num    &none      &none          &kp INSERT      &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none
+                                    &none      &none      &none          &kp ENTER       &kp BSPC   &kp DELETE
             >;
 
             display-name = "Nav";
@@ -481,10 +480,10 @@
 
         num {
             bindings = <
-&kp GRAVE   &kp LBKT   &kp N7  &kp N8      &kp N9  &kp RBKT         &none  &to_base   &to_extra  &to_tap   &sys_reset  &bootloader
-&comma_spc  &kp SEMI   &kp N4  &kp N5      &kp N6  &kp EQUAL        &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI    &none
-&none       &kp COMMA  &kp N1  &kp N2      &kp N3  &kp BACKSLASH    &none  &none      &to_nav    &kp RALT  &none       &none
-                               &kp PERIOD  &kp N0  &kp MINUS        &none  &none      &none
+&kp GRAVE   &kp LBKT         &kp N7  &kp N8      &kp N9  &kp RBKT         &sys_reset   &to_base   &to_extra  &to_tap   &none     &none
+&comma_spc  &comma_question  &kp N4  &kp N5      &kp N6  &kp EQUAL        &bootloader  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
+&none       &kp COLON        &kp N1  &kp N2      &kp N3  &kp BACKSLASH    &none        &none      &to_nav    &kp RALT  &none     &none
+                                     &kp PERIOD  &kp N0  &kp MINUS        &none        &none      &none
             >;
 
             display-name = "Num";
@@ -493,8 +492,8 @@
         sym {
             bindings = <
 &kp TILDE   &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK      &kp LPAR               &kp RIGHT_BRACE    &none  &to_base   &to_extra  &to_tap   &none     &none
-&comma_spc  &kp COLON       &kp DOLLAR       &kp PERCENT       &kp CARET              &plus_equal        &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
-&none       &kp LESS_THAN   &kp EXCLAMATION  &kp AT_SIGN       &kp POUND              &kp PIPE           &none  &none      &to_mouse  &kp RALT  &none     &none
+&comma_spc  &kp QUESTION    &kp DOLLAR       &kp PERCENT       &kp CARET              &plus_equal        &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
+&none       &kp SEMI        &kp EXCLAMATION  &kp AT_SIGN       &kp POUND              &kp PIPE           &none  &none      &to_mouse  &kp RALT  &none     &none
                                              &kp GREATER_THAN  &kp RIGHT_PARENTHESIS  &under_minus       &none  &none      &none
             >;
 
@@ -511,7 +510,5 @@
 
             display-name = "Func";
         };
-
     };
-
 };
